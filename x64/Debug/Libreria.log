@@ -1,5 +1,0 @@
-﻿  main.cpp
-C:\Users\user\Desktop\scuola\SUPEROIRI\GIT HUB\Libreria2\Libreria\Libreria.h(103,25): warning C4244: 'argomento': conversione da 'float' a 'int'. Possibile perdita di dati.
-C:\Users\user\Desktop\scuola\SUPEROIRI\GIT HUB\Libreria2\Libreria\Libreria.h(126,14): warning C4244: 'argomento': conversione da 'time_t' a 'unsigned int'. Possibile perdita di dati.
-C:\Users\user\Desktop\scuola\SUPEROIRI\GIT HUB\Libreria2\Libreria\main.cpp(12,28): warning C4305: 'inizializzazione': troncamento da 'double' a 'float'
-  Libreria.vcxproj -> C:\Users\user\Desktop\scuola\SUPEROIRI\GIT HUB\Libreria2\Libreria\x64\Debug\Libreria.exe
