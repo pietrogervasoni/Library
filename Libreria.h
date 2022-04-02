@@ -9,7 +9,6 @@
 using namespace std;
 
 
-void leyup(int);
 int max(int[], int);
 int min(int[], int);
 int somma(int[], int);
@@ -27,41 +26,6 @@ int locate(int [], int, int);
 
 
 
-
-void leyup(int lung) {
-	
-	//pulisce lo schermo
-	system("cls");
-	
-	//scrive la  prima riga
-	for (int i = 0; i < lung; i++) {
-		cout << "*";
-	}
-
-	cout << endl;
-
-	cout << "*";
-	
-	//inserisce gli spazzi prima della parola
-	for (int s = 0; s < ((lung - 3 - 2) / 2); s++) {
-		cout << " ";
-	}
-	cout << "yes";
-	
-	//inserisce gli spazzi dopo della parola
-	for (int d = 0; d < ((lung - 3 - 2) / 2); d++) {
-		cout << " ";
-	}
-	cout << "*" << endl;
-
-	//fa l'ultima riga
-	for (int i = 0; i < lung; i++) {
-		cout << "*";
-	}
-	cout << endl;
-	cout << endl;
-	cout << endl;
-}
 
 int max(int array [], int n) {
 	
@@ -242,4 +206,5 @@ int locate (int array [], int dim, int n) {
 	}
 	return -1; //element not found
 }
+
 
