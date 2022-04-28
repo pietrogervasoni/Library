@@ -1,0 +1,4 @@
+﻿  main.cpp
+C:\Users\user\Desktop\scuola\SUPEROIRI\GIT HUB\Libreria\Libreria.h(71,23): warning C4244: 'argomento': conversione da 'float' a 'int'. Possibile perdita di dati.
+C:\Users\user\Desktop\scuola\SUPEROIRI\GIT HUB\Libreria\Libreria.h(93,14): warning C4244: 'argomento': conversione da 'time_t' a 'unsigned int'. Possibile perdita di dati.
+  Libreria.vcxproj -> C:\Users\user\Desktop\scuola\SUPEROIRI\GIT HUB\Libreria\x64\Debug\Libreria.exe

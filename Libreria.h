@@ -4,6 +4,7 @@
 #include <iomanip>
 #include <time.h>
 #include <cstdlib>
+#include <string.h>
 
 
 using namespace std;
@@ -11,26 +12,27 @@ using namespace std;
 
 int max(int[], int);
 int min(int[], int);
-int somma(int[], int);
-float media(int[], float);
-float lunghezza_float (float);
+int sum(int[], int);
+float average(int[], float);
+float lunghezza_float(float);
 void array_rand (int[], int, int, int);
 void char_ascii (char);
 void ascii_char (int);
-void ascii_char_array (int [], int);
-bool primo (int);
+void ascii_char_array (int[], int);
+bool prime (int);
 void print_array (int[], int);
-bool pari (int);
-void selection_sort(int [], int);
-int locate(int [], int, int);
+bool even (int);
+void selection_sort(int[], int);
+int locate(int[], int, int);
+void toupper_string(char[]);
+void tolower_string(char[]);
 
 
 
 
 int max(int array [], int n) {
 	
-	//imposta come massimo il primo numero e poi controlla se i successivi sono maggiori
-	//se si li imposta coma massimo
+	//set the number as the maximum and then check if the next ones are greater if you set them as maximum
 	int max = array[0];
 	for (int i = 1; i < n; i++) {
 		if (array[i] > max) {
@@ -42,8 +44,7 @@ int max(int array [], int n) {
 
 int min(int array [], int n) {
 	
-	//imposta come minimo il primo numero e poi controlla se i successivi sono maggiori
-	//se si li imposta coma minimo
+	//set at least the first number and then check if the next ones are greater if you set them as a minimum
 	int min = array[0];
 	for (int i = 1; i < n; i++) {
 		if (array[i] < min) {
@@ -53,22 +54,22 @@ int min(int array [], int n) {
 	return min;
 }
 
-int somma(int array [], int n) {
+int sum(int array [], int n) {
 	
-	//imposta la somma a 0 e poi somma volta per volta gli elementi di un arrey
-	int somma = 0;
+	//set the sum to 0 and then sum the elements of an array from time to time
+	int sum = 0;
 	for (int i = 0; i < n; i++) {
-		somma = somma + array[i];
+		sum = sum + array[i];
 	}
-	return somma;
+	return sum;
 }
 
-float media(int array [], float n) {
+float average(int array [], float n) {
 	
-	//stramite la somma calcola la media dividendola per il numero di elementi dell'arrey della somma
-	float media = 0;
-	media = somma(array, n) / n;
-	return media;
+	//through the sum calculates the average by dividing it by the number of elements of the sum array
+	float average = 0;
+	average = sum(array, n) / n;
+	return average;
 }
 
 float lunghezza_float (float num) {
@@ -81,15 +82,14 @@ float lunghezza_float (float num) {
 	13,4642752752
 	*/
 	
-	//tramite il precision scrive il float di lunghezza decim
+	//through precision writes the float of length decim
 	cout.precision(decim);
 	return num;
 }
 
 void array_rand (int array [], int n, int max, int min) {
 	
-	//tramite la funzione rand dare alle celle di un arrey valore casuale
-	
+	//using the rand function to give the cells of an arrey random value
 	srand (time (0));
 	for (int i = 0; i < n; i++) {
 		
@@ -99,31 +99,28 @@ void array_rand (int array [], int n, int max, int min) {
 
 void char_ascii (char carattere) {
 	
-	//da un carattere resttiuisce il codice ascii
-	//tramite una conversione
+	//from a character returns the ascii code through a conversion
 	cout << (int) carattere;
 }
 
-void ascii_char_array (int ascii) {
+void ascii_char (int ascii) {
 	
-	//restituire dal codisce ascii il carattere
-	//tramite una conversione
+	//return the character from the ascii encoding through a conversion
 	cout << (char) ascii;
 }
 
 void ascii_char_array (int array [], int n) {
 
-	//restituire dal codisce ascii il carattere dei valori in un arrey
-	//tramite una conversione
+	//return from the ascii encoding the character of the values in an arrey through a conversion
 	for (int i = 0; i < n; i++) {
 		cout << (char)array[i];
 	}	
 }
 
-bool primo (int n) {
+bool prime (int n) {
 	
-	//calcolare se un valore e` primo
-	bool primo;
+	//calculate if a value is prime
+	bool prime;
 	int ndiv = 0;
 	
 	for (int i = 1; i <= n; i++) {
@@ -135,37 +132,39 @@ bool primo (int n) {
 	}
 	if (ndiv == 2) {
 		
-		primo = true;
+		prime = true;
 	}
 	else {
 		
-		primo = false;
+		prime = false;
 	}
-	return primo;
+	return prime;
 }
 
 void print_array (int array [], int lung) {
 	
-	//stampa un vettore
+	//print an array
 	for (int i = 0; i < lung; i++) {
 		cout << array[i] << " ";
 	}
 }
 
-bool pari (int n) {
+bool even (int n) {
 	
-	bool pari;
+	//check if the number is even or not
+	bool even;
 	if (n % 2 == 0) {
-		pari = true;
+		even = true;
 	}
 	else {
-		pari = false;
+		even = false;
 	}
-	return pari;
+	return even;
 }
 
 void selection_sort (int array [], int n) {
 
+	//implementation of selection sort algoritm
 	int min;
 	for (int i = 0; i < n; i++)	{
 
@@ -183,6 +182,7 @@ void selection_sort (int array [], int n) {
 
 int locate (int array [], int dim, int n) {
 
+	//implementation of binary search 
 	selection_sort(array, dim);
 
 	int start, end, mid;
@@ -207,4 +207,20 @@ int locate (int array [], int dim, int n) {
 	return -1; //element not found
 }
 
+void toupper_string(char testo[]) {
 
+	//convert a lowercase string to uppercase
+	for (int i = 0; testo[i] != '\0'; i++) {
+
+		testo[i] = toupper(testo[i]);
+	}
+}
+
+void tolower_string(char testo[]) {
+
+	//convert an uppercase string to lowercase
+	for (int i = 0; testo[i] != '\0'; i++) {
+
+		testo[i] = tolower(testo[i]);
+	}
+}

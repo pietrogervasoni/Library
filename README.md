@@ -57,19 +57,18 @@ edit or compile and run the file
 
 # 🎈 Usage <a name="usage"></a>
 
-`void layup(int)` -> set a layup from the length of a word
 
-`int max(int[], int)` -> calculate the maximum number in an array
+`int max (int [], int)` -> calculate the maximum number in an array
 
-`int min(int[], int)` -> calculate the minimum number in an array
+`int min (int [], int)` -> calculate the minimum number in an array
 
-`int somma(int[], int)` -> calculate the sum of the number in an array
+`int sum (int [], int)` -> calculate the sum of the number in an array
 
-`float media(int[], float)` -> calculate the average of the number in an array
+`float average (int [], float)` -> calculate the average of the number in an array
 
 `float lunghezza_float (float)` -> limits the length of a float
 
-`void array_rand (int[], int, int, int)` -> generate a random array
+`void array_rand (int [], int, int, int)` -> generate a random array
 
 `void char_ascii (char)` -> convert a char into the correspondent ASCII code 
 
@@ -77,15 +76,19 @@ edit or compile and run the file
 
 `void ascii_char_arrey (int [], int)` -> convert every char into the correspondent ASCII code in an array 
 
-`bool primo (int)` -> calculate if the number is prime or not
+`bool prime (int)` -> calculate if the number is prime or not
 
-`void print_arrey (int[], int)` -> print an array
+`void print_arrey (int [], int)` -> print an array
 
-`bool pari (int)` -> calculate if a number is even or not
+`bool even (int)` -> calculate if a number is even or not
 
 `void selection_sort (int [], int)` -> order an array in ascending order
 
 `int locate (int [], int, int)` -> locate an int in an array
+
+`void toupper_string (char [])` -> converts strings from lowercase to uppercase
+
+`void tolower_string (char [])` -> converts strings from uppercase to lowercase
 
 
 
