@@ -26,6 +26,7 @@ void selection_sort(int[], int);
 int locate(int[], int, int);
 void toupper_string(char[]);
 void tolower_string(char[]);
+string toBinary(int);
 
 
 
@@ -223,4 +224,15 @@ void tolower_string(char testo[]) {
 
 		testo[i] = tolower(testo[i]);
 	}
+}
+
+string toBinary(int n) {
+
+	//converts an int to its binary correspondent and return it as a string
+	string r;
+	while (n != 0) {
+		r = (n % 2 == 0 ? "0" : "1") + r;
+		n /= 2;
+	}
+	return r;
 }

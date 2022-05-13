@@ -36,7 +36,7 @@ A personal library that contains things of various kinds, some from a school pro
 
 </br>
 
-To use the project file you need the [MinGw](https://www.mingw-w64.org/) or onother compiler for C++.
+To use the library file you need the [MSVC](https://docs.microsoft.com/it-it/cpp/build/reference/compiler-options?view=msvc-170) compiler or onother compiler for C++.
 
 </br>
 
@@ -90,17 +90,19 @@ edit or compile and run the file
 
 `void tolower_string (char [])` -> converts strings from uppercase to lowercase
 
+`string toBinary (int n)` -> converts an int to its binary correspondent and return it as a string
+
 
 
 # ⛏️ Built Using <a name = "built_using"></a>
 
-- [C++] - Programming Lenguage
-- [MinGw](https://www.mingw-w64.org/) - Compiler
+- C++ - Programming Lenguage
+- [MSVC](https://docs.microsoft.com/it-it/cpp/build/reference/compiler-options?view=msvc-170) - Compiler
 
 
 
 # ✍️ Authors <a name = "authors"></a>
 
-- [@pietrogervasoni](https://github.com/kylelobo) - Idea & Initial work
+- [@pietrogervasoni](https://github.com/pietrogervasoni) - Idea & Initial work
 
 
